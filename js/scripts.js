@@ -26,6 +26,17 @@ $(() => {
 
 
 
+    $('body').on('click', '.modal_link', function (e) {
+      e.preventDefault()
+
+      Fancybox.close(true)
+        Fancybox.show([{
+            src: $(this).data('content'),
+            type: 'inline',
+        }]);
+  })
+
+
     	// Fancybox
 	Fancybox.defaults.autoFocus = false
 	Fancybox.defaults.trapFocus = false

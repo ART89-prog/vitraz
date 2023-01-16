@@ -396,33 +396,12 @@ header {
     margin-bottom: 216px;
 }
 .header_bottom-title {
-    font-family: 'DolceCaffe-Regular';
     font-size: 90px;
     line-height: 105px;
     text-align: center;
     color: var(--text_color2); 
     padding-top: 64px;
     position: relative;
-}
-.header_bottom-title:before {
-    position: absolute;
-    content: "";
-    width: 182px;
-    height: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -21px;
-    background: #FFD494;
-}
-.header_bottom-title:after {
-    position: absolute;
-    content: "";
-    width: 82px;
-    height: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -34px;
-    background: #FFD494;
 }
 .header_bottom-text {
     font-weight: 400;
@@ -573,7 +552,6 @@ header .menu .item.current-menu-item>a:after {
     margin-top: 25px;
 }
 .title {
-    font-family: 'DolceCaffe-Regular';
     font-size: var(--font_size_title);
     line-height: 1.14;
     color: var(--text_color);    
