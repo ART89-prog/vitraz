@@ -449,8 +449,8 @@ header .mob_menu_btn .icon {
 }
 header .close_btn { 
     display: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 28px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -562,8 +562,9 @@ header .menu {
 .header_contacts-mob {
     display: none;
 }
-
-
+.header_map {
+    display: none;
+}
 
 /* about */
 .block {
@@ -624,7 +625,7 @@ header .menu {
     border-radius: 50%;
     background: #f7c4ca;
     left: 0;
-    top: 9px;
+    top: 7px;
 }
 .about_left {
     display: flex;

@@ -231,36 +231,6 @@ $(window).on('resize', () => {
 		}
 
 
-		// Фикс. шапка
-		headerInit = false
-		$('.header_top').height('auto')
-
-		setTimeout(() => {
-			headerInit = true
-			headerHeight = $('header').outerHeight()
-
-			$('.header_top').height(headerHeight)
-
-			headerInit && $(window).scrollTop() > headerHeight
-				? $('header').addClass('fixed')
-				: $('header').removeClass('fixed')
-		}, 100)
-
-
-		// Фикс. моб. шапка
-		mobHeaderInit = false
-		$('.mob_header_wrap').height('auto')
-
-		setTimeout(() => {
-			mobHeaderInit = true
-			mobHeaderHeight = $('.mob_header').outerHeight()
-
-			$('.mob_header_wrap').height(mobHeaderHeight)
-
-			mobHeaderInit && $(window).scrollTop() > 0
-				? $('.mob_header').addClass('fixed')
-				: $('.mob_header').removeClass('fixed')
-		}, 100)
 
 
 		// Перезапись ширины окна

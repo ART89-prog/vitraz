@@ -23,7 +23,7 @@
         min-height: -webkit-fill-available;
         min-height:         fill-available;
         margin: 0;
-        padding: 30px 20px;
+        padding: 0px 20px;
 
         transition: transform .3s linear;
         transform: translateX(-100%);
@@ -46,6 +46,7 @@
     }
     header .menu .item {
         width: 100%;
+        margin-right: 0;
     }
     header .menu .item + .item {
         margin-left: 0;
@@ -53,9 +54,9 @@
     header .menu .item > a {
         display: block;
         height: auto;
-        padding: 17px 0;
-        text-align: left;
-        color: #000;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #fff;
     }  
     .mob_menu_btn span {
         position: relative;
@@ -92,7 +93,7 @@
         transform: rotate(-45deg);
     }
     .menu_open header {
-        background: #595959;
+        background: #2A292F;
     }
     header .close_btn {
         display: none;
@@ -120,7 +121,7 @@
         display: none;
     }
     header {
-        padding-top: 8px;
+        padding-top: 10px;
         padding-bottom: 72px;
     }
     .header_top {
@@ -133,6 +134,61 @@
     }
     .header_contacts-mob {
         display: block;
+    }
+    .header_map {
+        display: block;
+    }
+    .header_contacts-mob {
+        padding: 24px 0;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+    .header_contacts-mob:after {
+        position: absolute;
+        content: "";
+        width: calc(100% + 40px);
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background: #414048;
+        z-index: 2;
+    }
+    .header_contacts-mob:before {
+        position: absolute;
+        content: "";
+        width: calc(100% + 40px);
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
+        background: #414048;
+        z-index: 2;
+    }
+    .header_contacts-link {
+        display: inline-block;
+    }
+    .header_contacts-soc {
+        justify-content: center;
+    }
+    .header_contacts-soc a:first-child {
+        margin-left: 0;
+    }
+    .overlay {
+        top: 48px;
+    }
+    .header_top {
+        position: fixed;
+        z-index: 890;
+        background: #333;
+        width: 100%;
+        margin: -62px -20px -10px;
+        padding: 10px 20px 10px;
+    }
+    .header_bottom {
+        margin-top: 52px;
     }
 
 
