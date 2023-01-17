@@ -137,6 +137,75 @@ $(() => {
 
 
 
+     // Слайдер Работы
+
+     const worksSliders = [],
+     works = document.querySelectorAll('.works-slider')
+ 
+     works.forEach(function (el, i) {
+     el.classList.add('works_s' + i)
+ 
+     let options = {
+       loop: false,
+       speed: 500,
+       watchSlidesProgress: true,
+       slideActiveClass: 'active',
+       slideVisibleClass: 'visible',
+       pagination: {
+         el: '.swiper-pagination2',
+         type: 'bullets',
+         clickable: true,
+       },
+       navigation: {
+         nextEl: '.swiper-button-next2',
+         prevEl: '.swiper-button-prev2'
+       },
+       preloadImages: false,
+       lazy: {
+         enabled: true,
+         checkInView: true,
+         loadOnTransitionStart: true,
+         loadPrevNext: true
+       },
+       breakpoints: {
+         0: {
+           spaceBetween: 0,
+           slidesPerView: 1
+         },
+         480: {
+           spaceBetween: 0,
+           slidesPerView: 1
+         },
+         768: {
+           spaceBetween: 20,
+           slidesPerView: 2
+         },
+         1023: {
+          spaceBetween: 20,
+          slidesPerView: 3
+        },
+         1280: {
+           spaceBetween: 30,
+           slidesPerView: 4
+         }
+       },
+       on: {
+         init: swiper => {
+           setTimeout(() => setHeight($(swiper.$el).find('.works .swiper-slide')))
+         },
+         resize: swiper => {
+           setTimeout(() => {
+             $(swiper.$el).find('.works .swiper-slide').height('auto')
+             setHeight($(swiper.$el).find('.works .swiper-slide'))
+           })
+         }
+       }
+     }
+ 
+     worksSliders.push(new Swiper('.works_s' + i, options))
+   })
+
+
 
 
     
