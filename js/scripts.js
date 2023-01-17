@@ -71,118 +71,13 @@ $(() => {
 
 
 
-  var show = true;
-  var countbox = ".about_items";
-  $(window).on("scroll load resize", function () {
-      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-      var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-      var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-      var w_height = $(window).height(); // Высота окна браузера
-      var d_height = $(document).height(); // Высота всего документа
-      var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-          $('.about_item-col').css('opacity', '0');
-          $('.about_item-col').spincrement({
-              thousandSeparator: "",
-              duration: 1200
-          });
-           
-          show = false;
-      }
-  });
+      // Слайдер Услуги
 
-
-
+      const serviceSliders = [],
+      service = document.querySelectorAll('.service-slider')
   
-// init Masonry
-var grid = document.querySelector('.grid');
-
-var msnry = new Masonry(grid, {
-  columnWidth: '.grid-sizer',
-  itemSelector: '.grid-item',
-  gutter: 30,
-  percentPosition: true
-});
-
-imagesLoaded( grid ).on( 'progress', function() {
-  // layout Masonry after each image loads
-  msnry.layout();
-});
-
-
-
-
-
-
-
-  // Большой слайдер
-
-  const bigSliders = [],
-  big = document.querySelectorAll('.slider-big')
-
-  big.forEach(function (el, i) {
-  el.classList.add('big_s' + i)
-
-  let options = {
-    loop: false,
-    speed: 500,
-    watchSlidesProgress: true,
-    slideActiveClass: 'active',
-    slideVisibleClass: 'visible',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    preloadImages: false,
-    lazy: {
-      enabled: true,
-      checkInView: true,
-      loadOnTransitionStart: true,
-      loadPrevNext: true
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      480: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      768: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      1280: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      }
-    },
-    on: {
-      init: swiper => {
-        setTimeout(() => setHeight($(swiper.$el).find('.slider-big')))
-      },
-      resize: swiper => {
-        setTimeout(() => {
-          $(swiper.$el).find('.slider-big').height('auto')
-          setHeight($(swiper.$el).find('.slider-big'))
-        })
-      }
-    }
-  }
-
-  bigSliders.push(new Swiper('.big_s' + i, options))
-})
-
-
-
-      // Блог слайдер
-
-      const blogSliders = [],
-      blog = document.querySelectorAll('.blog-slider')
-  
-      blog.forEach(function (el, i) {
-      el.classList.add('blog_s' + i)
+      service.forEach(function (el, i) {
+      el.classList.add('service_s' + i)
   
       let options = {
         loop: false,
@@ -190,9 +85,14 @@ imagesLoaded( grid ).on( 'progress', function() {
         watchSlidesProgress: true,
         slideActiveClass: 'active',
         slideVisibleClass: 'visible',
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
         navigation: {
-          nextEl: '.swiper-button-next2',
-          prevEl: '.swiper-button-prev2'
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         },
         preloadImages: false,
         lazy: {
@@ -221,323 +121,21 @@ imagesLoaded( grid ).on( 'progress', function() {
         },
         on: {
           init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.blog .swiper-slide')))
+            setTimeout(() => setHeight($(swiper.$el).find('.service .swiper-slide')))
           },
           resize: swiper => {
             setTimeout(() => {
-              $(swiper.$el).find('.blog .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.blog .swiper-slide'))
+              $(swiper.$el).find('.service .swiper-slide').height('auto')
+              setHeight($(swiper.$el).find('.service .swiper-slide'))
             })
           }
         }
       }
   
-      blogSliders.push(new Swiper('.blog_s' + i, options))
+      serviceSliders.push(new Swiper('.service_s' + i, options))
     })
 
 
-
-    // Путешествия слайдер
-
-      const tourSliders = [],
-      tour = document.querySelectorAll('.tour-slider')
-  
-      tour.forEach(function (el, i) {
-      el.classList.add('tour_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
-        navigation: {
-          nextEl: '.swiper-button-next3',
-          prevEl: '.swiper-button-prev3'
-        },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
-        },
-        breakpoints: {
-          0: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          480: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          768: {
-            spaceBetween: 20,
-            slidesPerView: 2
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 3
-          }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.tour .swiper-slide')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.tour .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.tour .swiper-slide'))
-            })
-          }
-        }
-      }
-  
-      tourSliders.push(new Swiper('.tour_s' + i, options))
-    })
-
-
-    // Школа инструкторов слайдер    
-
-      const schoolSliders = [],
-      school = document.querySelectorAll('.school-slider')
-  
-      school.forEach(function (el, i) {
-      el.classList.add('school_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
-        navigation: {
-          nextEl: '.swiper-button-next4',
-          prevEl: '.swiper-button-prev4'
-        },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
-        },
-        breakpoints: {
-          0: {
-            spaceBetween: 0,
-            slidesPerView: 1
-          },
-          480: {
-            spaceBetween: 0,
-            slidesPerView: 2
-          },
-          768: {
-            spaceBetween: 20,
-            slidesPerView: 3
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 4
-          }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.school .swiper-slide')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.school .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.school .swiper-slide'))
-            })
-          }
-        }
-      }
-  
-      schoolSliders.push(new Swiper('.school_s' + i, options))
-    })
-
-
-
-    // Похожие материалы слайдер
-
-      const materialsSliders = [],
-      materials = document.querySelectorAll('.materials-slider')
-  
-      materials.forEach(function (el, i) {
-      el.classList.add('materials_s' + i)
-  
-      let options = {
-        loop: false,
-        speed: 500,
-        watchSlidesProgress: true,
-        slideActiveClass: 'active',
-        slideVisibleClass: 'visible',
-        navigation: {
-          nextEl: '.swiper-button-next6',
-          prevEl: '.swiper-button-prev6'
-        },
-        preloadImages: false,
-        lazy: {
-          enabled: true,
-          checkInView: true,
-          loadOnTransitionStart: true,
-          loadPrevNext: true
-        },
-        breakpoints: {
-          0: {
-            spaceBetween: 20,
-            slidesPerView: 1
-          },
-          480: {
-            spaceBetween: 24,
-            slidesPerView: 2
-          },
-          768: {
-            spaceBetween: 24,
-            slidesPerView: 3
-          },
-          1280: {
-            spaceBetween: 30,
-            slidesPerView: 3
-          }
-        },
-        on: {
-          init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.materials .blog_item')))
-          },
-          resize: swiper => {
-            setTimeout(() => {
-              $(swiper.$el).find('.materials .blog_item').height('auto')
-              setHeight($(swiper.$el).find('.materials .blog_item'))
-            })
-          }
-        }
-      }
-  
-      materialsSliders.push(new Swiper('.materials_s' + i, options))
-    })
-
-
-
-    // Первый маленький слайдер со страницы поста
-
-    const littleSliders = [],
-    little = document.querySelectorAll('.slider-little')
-
-    little.forEach(function (el, i) {
-    el.classList.add('little_s' + i)
-
-    let options = {
-      loop: false,
-      speed: 500,
-      watchSlidesProgress: true,
-      slideActiveClass: 'active',
-      slideVisibleClass: 'visible',
-      navigation: {
-        nextEl: '.swiper-button-next7',
-        prevEl: '.swiper-button-prev7'
-      },
-      preloadImages: false,
-      lazy: {
-        enabled: true,
-        checkInView: true,
-        loadOnTransitionStart: true,
-        loadPrevNext: true
-      },
-      breakpoints: {
-        0: {
-          spaceBetween: 0,
-          slidesPerView: 'auto'
-        },
-        480: {
-          spaceBetween: 0,
-          slidesPerView: 'auto'
-        },
-        768: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        },
-        1280: {
-          spaceBetween: 0,
-          slidesPerView: 1
-        }
-      },
-      on: {
-        init: swiper => {
-          setTimeout(() => setHeight($(swiper.$el).find('.slider-little .swiper-slide')))
-        },
-        resize: swiper => {
-          setTimeout(() => {
-            $(swiper.$el).find('.slider-little .swiper-slide').height('auto')
-            setHeight($(swiper.$el).find('.slider-little .swiper-slide'))
-          })
-        }
-      }
-    }
-
-    littleSliders.push(new Swiper('.little_s' + i, options))
-  })
-
-
-
-// Второй маленький слайдер со страницы поста
-
-  const little2Sliders = [],
-  little2 = document.querySelectorAll('.slider-little2')
-
-  little2.forEach(function (el, i) {
-  el.classList.add('little2_s' + i)
-
-  let options = {
-    loop: false,
-    speed: 500,
-    watchSlidesProgress: true,
-    slideActiveClass: 'active',
-    slideVisibleClass: 'visible',
-    navigation: {
-      nextEl: '.swiper-button-next8',
-      prevEl: '.swiper-button-prev8'
-    },
-    preloadImages: false,
-    lazy: {
-      enabled: true,
-      checkInView: true,
-      loadOnTransitionStart: true,
-      loadPrevNext: true
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 0,
-        slidesPerView: 'auto'
-      },
-      480: {
-        spaceBetween: 0,
-        slidesPerView: 'auto'
-      },
-      768: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      1280: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      }
-    },
-    on: {
-      init: swiper => {
-        setTimeout(() => setHeight($(swiper.$el).find('.slider-little2')))
-      },
-      resize: swiper => {
-        setTimeout(() => {
-          $(swiper.$el).find('.slider-little2').height('auto')
-          setHeight($(swiper.$el).find('.slider-little2'))
-        })
-      }
-    }
-  }
-
-  little2Sliders.push(new Swiper('.little2_s' + i, options))
-})
 
 
 
