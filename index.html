@@ -64,10 +64,10 @@
 								<a href="#" class="header_contacts-link">Связаться со специалистом</a>
 								<div class="header_contacts-soc">
 									<a href="#">
-										<img src="images/vk.png" alt="">
+										<img src="images/vk.svg" alt="">
 									</a>
 									<a href="#">
-										<img src="images/telegram.png" alt="">
+										<img src="images/tg.svg" alt="">
 									</a>
 								</div>
 							</div>
@@ -82,27 +82,27 @@
 								<a href="#" class="header_contacts-link">Связаться со специалистом</a>
 								<div class="header_contacts-soc">
 									<a href="#">
-										<img src="images/vk.png" alt="">
+										<img src="images/vk.svg" alt="">
 									</a>
 									<a href="#">
-										<img src="images/telegram.png" alt="">
+										<img src="images/tg.svg" alt="">
 									</a>
 								</div>
 							</div>	
 							<div class="item">
-								<a href="index.html">О нас</a>
+								<a href="#about" class="scroll">О нас</a>
 							</div>
 							<div class="item">
-								<a href="#tour.html">Услуги</a>
+								<a href="#service"class="scroll">Услуги</a>
 							</div>
 							<div class="item">
-								<a href="blog.html">Наши работы</a>
+								<a href="#works" class="scroll">Наши работы</a>
 							</div>
 							<div class="item">
-								<a href="photo.html">Преимущества</a>
+								<a href="#advantages" class="scroll">Преимущества</a>
 							</div>
 							<div class="item">
-								<a href="school.html">Контакты</a>
+								<a href="#contacts" class="scroll">Контакты</a>
 							</div>	
 											
 						</nav>			
@@ -118,7 +118,7 @@
 
 
 
-				<section class="about block">
+				<section class="about block" id="about">
 					<div class="cont">						
 						<div class="about_title title">О нас</div>
 						<div class="about_wrap">
@@ -157,7 +157,6 @@
 				</section>
 
 
-
 				<section class="technology">
 					<div class="cont">
 						<div class="technology_wrap">
@@ -174,10 +173,8 @@
 					</div>
 				</section>
 
-				
-
-			
-				<section class="service block">
+							
+				<section class="service block" id="service">
 					<div class="cont">
 						<div class="service_title title">Услуги</div>
 						<div class="service-slider">
@@ -239,14 +236,10 @@
 							</div>
 						</div>
 						<div class="swiper-button-prev">
-							<div class="icon">
-								<svg><use xlink:href="images/sprite.svg#arrow_left"></use></svg>
-							</div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#arrow_left"></use></svg>
 						</div>
 						<div class="swiper-button-next">
-							<div class="icon">
-								<svg><use xlink:href="images/sprite.svg#arrow_right"></use></svg>
-							</div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#arrow_right"></use></svg>
 						</div>	
 						<div class="swiper-pagination"></div>			
 					</div>
@@ -254,7 +247,7 @@
 
 
 
-				<section class="works block">
+				<section class="works block" id="works">
 					<div class="cont">
 						<div class="works_title title">Наши работы</div>
 						<div class="works-slider">
@@ -262,102 +255,100 @@
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works1.jpg" alt="">
+											<img data-src="images/works1.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works2.jpg" alt="">
+											<img data-src="images/works2.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works3.jpg" alt="">
+											<img data-src="images/works3.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works4.jpg" alt="">
+											<img data-src="images/works4.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works2.jpg" alt="">
+											<img data-src="images/works2.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>
 								<div class="swiper-slide">
 									<a href="#" class="works_item">
 										<div class="works_item-img">
-											<img src="images/works3.jpg" alt="">
+											<img data-src="images/works3.jpg" alt="" class="swiper-lazy">
 										</div>
 									</a>									
 								</div>							
-							</div>
-							<a href="#" class="links modal_link" data-content="#modal_callback">
-								<span>Заказать расчёт витража</span>								
-							</a>	
-						</div>
-						
+							</div>								
+						</div>						
 						<div class="swiper-button-prev swiper-button-prev2">
-							<img src="images/arrow_prev.png" alt="">
+							<svg class="icon"><use xlink:href="images/sprite.svg#arrow_left"></use></svg>
 						</div>
 						<div class="swiper-button-next swiper-button-next2">
-							<img src="images/arrow_next.png" alt="">
+							<svg class="icon"><use xlink:href="images/sprite.svg#arrow_right"></use></svg>
 						</div>	
 						<div class="swiper-pagination2"></div>	
 						
-						
+						<a href="#" class="links modal_link" data-content="#modal_callback">
+							<span>Заказать расчёт витража</span>								
+						</a>
 					</div>
 				</section>
 
 
 
-				<section class="advantages block">
+				<section class="advantages block" id="advantages">
 					<div class="cont">
 						<div class="advantages_title title">Преимущества</div>
 						<div class="advantages_items">
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages1.png" alt="">
+									<img data-src="images/advantages1.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Опыт работы<br>более 20 лет</div>	
 							</div>
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages2.png" alt="">
+									<img data-src="images/advantages2.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Огромный выбор материалов для<br>изготовления витражей</div>	
 							</div>
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages3.png" alt="">
+									<img data-src="images/advantages3.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Доставка готовых<br>изделий</div>	
 							</div>
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages4.png" alt="">
+									<img data-src="images/advantages4.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Разработка эскизов витражей<br>по желанию клиента под интерьер</div>	
 							</div>
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages5.png" alt="">
+									<img data-src="images/advantages5.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Предоставление каталога<br>для простоты выбора</div>	
 							</div>
 							<div class="advantages_item">
 								<div class="advantages_item-img">
-									<img src="images/advantages6.png" alt="">
+									<img data-src="images/advantages6.png" alt="" class="lazyload">
 								</div>
 								<div class="advantages_item-title">Создание витражей<br>любой сложности и размеров</div>	
 							</div>
@@ -366,7 +357,7 @@
 				</section>
 
 
-				<section class="contacts">
+				<section class="contacts" id="contacts">
                     <div class="cont">
                         <div class="contacts_title title">Контакты</div>                   
 					 </div>	
@@ -382,15 +373,14 @@
 								<div class="contacts_info-graffik">Режим работы: Пн.-Пт.: 9:00 - 17:00</div>
 								<a href="#" class="contacts_info-link">
 									<span>Связь с художниками</span>
-									<img src="images/telegram.png" alt="">
+									<img data-src="images/telegram.png" alt="" class="lazyload">
 								</a>
 							</div>
 							<div class="contacts_img">
-								<img src="images/contacts_img.jpg" alt="">
+								<img data-src="images/contacts_img.jpg" alt="" class="lazyload">
 							</div>
 					 	</div>								
-					</div>                   
-                   
+					</div>                  
                 </section>
 
 
@@ -398,7 +388,7 @@
 				<div class="cont">
 					<div class="footer_copyright">© 2022 Витражный мир</div>
 					<a href="#" class="footer_link">
-						<img src="images/vk.png" alt="">
+						<img data-src="images/vk.png" alt="" class="lazyload">
 						<span>Мы вконтакте</span>
 					</a>
 					<div class="footer_author">
@@ -443,9 +433,13 @@
 						<label for="select">Выберите услугу</label>
 						<select id="select">
 							<option value="1">Витраж дверей шкафов купе</option>
-							<option value="2">Витраж дверей шкафов купе</option>
-							<option value="3">Витраж дверей шкафов купе</option>
-							<option value="4">Витраж дверей шкафов купе</option>
+							<option value="2">Витраж ниш и перегородок</option>
+							<option value="3">Витраж кухонных фасадов</option>
+							<option value="4">Витраж окон</option>
+							<option value="5">Витраж потолков</option>
+							<option value="6">Витраж вставок в двери</option>
+							<option value="7">Витраж зеркал и стеклянных столов</option>
+							<option value="8">Витраж декоративных панно и картин</option>
 						</select>
 					</div>
 				</div>

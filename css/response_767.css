@@ -57,6 +57,7 @@
         padding-bottom: 15px;
         text-align: center;
         color: #fff;
+        border-bottom: none;
     }  
     .mob_menu_btn span {
         position: relative;
@@ -190,6 +191,15 @@
     .header_bottom {
         margin-top: 52px;
     }
+
+    .modal_callback {
+        padding: 25px 16px 26px;
+    }
+    .fancybox__content>.carousel__button.is-close {
+        top: 15px;
+        right: 10px;
+    }
+    
 
 
   

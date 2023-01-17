@@ -535,10 +535,13 @@ header .menu {
 }
 .header_contacts-soc a {
     display: block;
-    margin-left: 8px;
+    margin-left: 8px;    
+    width: 32px;
+    height: 32px;
+    transition: all .4s;
 }
-.header_contacts-soc a img {
-    display: block;
+.header_contacts-soc a:hover {
+    opacity: 0.8;
 }
 .links {
     width: 176px;
@@ -678,7 +681,7 @@ header .menu {
 
 
 
-
+/* service */
 .service {
     background: #2A292F;
     padding-bottom: 136px;
@@ -722,7 +725,6 @@ header .menu {
     margin-top: 11px;
     text-align: center;
 }
-
 .swiper-slide {
     position: relative;
 }
@@ -736,13 +738,15 @@ header .menu {
     transition: all .4s;
 }
 .swiper-button-prev .icon {
-
+    width: 14px;
+    height: 26px;
+    fill: #a787aa;
 }
-.swiper-button-prev:hover {
-    background: #333;
+.swiper-button-prev:hover .icon {
+    fill: #92b0ab;
 }
-.swiper-button-next:hover {
-    background: #333;
+.swiper-button-next:hover .icon {
+    fill: #92b0ab;
 }
 .swiper-button-next {
     width: 50px;
@@ -752,6 +756,11 @@ header .menu {
     top: 50%;
     transform: translateY(62px);
     transition: all .4s;
+}
+.swiper-button-next .icon {
+    width: 14px;
+    height: 26px;
+    fill: #a787aa;
 }
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -50px;
@@ -792,7 +801,6 @@ header .menu {
     pointer-events: none;
     opacity: 0;
 }
-
 .lazyload,
 .swiper-lazy {
     transition: opacity .5s linear;
@@ -805,6 +813,7 @@ header .menu {
 
 
 
+/* works */
 .works_title {
     margin-bottom: 30px;
 }
@@ -831,29 +840,39 @@ header .menu {
     margin: 72px auto 0;
     width: 240px;
 }
-.swiper-button-prev2 {
-    width: 50px;
-    height: 50px;
-    border-radius: 90px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(62px);
-    transition: all .4s;
-}
-.swiper-button-prev2:hover {
-    background: #333;
-}
-.swiper-button-next2:hover {
-    background: #333;
-}
 .swiper-button-next2 {
     width: 50px;
     height: 50px;
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(62px);
+    transform: translateY(-40px);
     transition: all .4s;
+}
+.swiper-button-prev2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40px);
+    transition: all .4s;
+}
+.swiper-button-prev2 .icon {
+    width: 14px;
+    height: 26px;
+    fill: #a787aa;
+}
+.swiper-button-next2 .icon {
+    width: 14px;
+    height: 26px;
+    fill: #a787aa;
+}
+.swiper-button-prev2:hover .icon {
+    fill: #92b0ab;
+}
+.swiper-button-next2:hover .icon {
+    fill: #92b0ab;
 }
 .swiper-pagination2 .swiper-pagination-bullet {
     display: block;
@@ -883,7 +902,7 @@ header .menu {
 
 
 
-
+/* advantages */
 .advantages {
     background: #2A292F;
 }
@@ -923,7 +942,7 @@ header .menu {
 }
 
 
-
+/* contacts */
 .contacts .map_wrap {
     position: relative;
     overflow: hidden;
@@ -1013,8 +1032,8 @@ header .menu {
     background: #48bce9;
 }
 .contacts_info-link img {
-    width: 41px;
-    height: 48px;
+    width: 25px;
+    height: 21px;
 }
 .contacts_img {
     position: absolute;
@@ -1025,8 +1044,7 @@ header .menu {
 
 
 
-
-
+/* footer */
 footer {
     padding-top: 43px;
     padding-bottom: 31px;
@@ -1076,10 +1094,12 @@ footer .cont {
 
 
 
+/* Модалка */
 .modal_callback {
-    max-width: 450px;
+    max-width: 592px;
     width: 100%;
-    padding: 25px 16px 26px;
+    border-radius: 8px;
+    padding: 32px 35px;
 }
 .modal_callback-title {
     font-size: 32px;
@@ -1117,6 +1137,10 @@ footer .cont {
     font-weight: 400;
     color: #3f404a;
     padding: 0 12px;
+    transition: all .4s;
+}
+.modal_callback form .line .field input:hover {
+    border: 1px solid #979797;
 }
 .modal_callback form .line .field textarea {
     height: 112px;
@@ -1130,6 +1154,10 @@ footer .cont {
     color: #3f404a;
     padding: 12px;
     resize: none;
+    transition: all .4s;
+}
+.modal_callback form .line .field textarea:hover {
+    border: 1px solid #979797;
 }
 .nice-select {
     font-family: "Gilroy";
@@ -1141,6 +1169,12 @@ footer .cont {
     background: #ffffff;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
+}
+.nice-select .option.selected {
+    font-weight: 400;
+}
+.nice-select:hover {
+    border: 1px solid #979797;
 }
 .modal_callback form button {
     width: 192px;
@@ -1156,4 +1190,12 @@ footer .cont {
 }
 .modal_callback form button:hover {
     background-color: #92b0ab;
+}
+.fancybox__content>.carousel__button.is-close {
+    color: var(--fancybox-color, #a384a6);
+    top: 25px;
+    right: 25px;
+}
+.fancybox__content>.carousel__button.is-close:hover {
+    color: var(--fancybox-color, #92b0ab);
 }
