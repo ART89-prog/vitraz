@@ -57,7 +57,7 @@ $(() => {
 
 
   $('select').niceSelect();
-  
+
 
   $('input[type=tel]').inputmask('+7 (999) 999-99-99')
 
@@ -174,16 +174,16 @@ $(() => {
        },
        breakpoints: {
          0: {
-           spaceBetween: 0,
-           slidesPerView: 1
+           spaceBetween: 20,
+           slidesPerView: 2
          },
          480: {
-           spaceBetween: 0,
-           slidesPerView: 1
+           spaceBetween: 20,
+           slidesPerView: 2
          },
          768: {
            spaceBetween: 20,
-           slidesPerView: 2
+           slidesPerView: 3
          },
          1023: {
           spaceBetween: 20,
@@ -233,13 +233,13 @@ $(window).on('resize', () => {
 
 		// Фикс. шапка
 		headerInit = false
-		$('.header_wrap').height('auto')
+		$('.header_top').height('auto')
 
 		setTimeout(() => {
 			headerInit = true
 			headerHeight = $('header').outerHeight()
 
-			$('.header_wrap').height(headerHeight)
+			$('.header_top').height(headerHeight)
 
 			headerInit && $(window).scrollTop() > headerHeight
 				? $('header').addClass('fixed')
