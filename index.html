@@ -26,8 +26,9 @@
 
 		
 		<!-- Подключение файлов стилей -->
-		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">		
 		<link rel="stylesheet" href="css/swiper.css">
+		<link rel="stylesheet" href="css/nice-select.css">
 		<link rel="stylesheet" href="css/fancybox.css">
 		
 		<link rel="stylesheet" href="css/styles.css">
@@ -278,7 +279,11 @@
 									</a>									
 								</div>							
 							</div>
+							<a href="#" class="links modal_link" data-content="#modal_callback">
+								<span>Заказать расчёт витража</span>								
+							</a>	
 						</div>
+						
 						<div class="swiper-button-prev swiper-button-prev2">
 							<img src="images/arrow_prev.png" alt="">
 						</div>
@@ -287,9 +292,7 @@
 						</div>	
 						<div class="swiper-pagination2"></div>	
 						
-						<a href="#" class="links modal_link" data-content="#modal_callback">
-							<span>Заказать расчёт витража</span>								
-						</a>
+						
 					</div>
 				</section>
 
@@ -342,55 +345,42 @@
 
 				<section class="contacts">
                     <div class="cont">
-                        <div class="contacts_title title">Наши контакты</div>                        
-                        <div class="contacts_wrapper">                
-							<div class="contacts_items">
-								<div class="contacts_item">
-									<div class="contacts_item-info">
-										<div class="contacts_item-title">Телефон:</div>
-										<a href="tel:74996817108" class="contacts_item-text contacts_item-text-phone">+7 (499) 681-71-08</a>
-									</div>
-								</div>
-								<div class="contacts_item">                                    
-									<div class="contacts_item-info">
-										<div class="contacts_item-title">E-mail:</div>
-										<a href="mailto:info@live-telecom.ru" class="contacts_item-text contacts_item-text-email">info@live-telecom.ru</a>
-									</div>
-								</div><br><br>
-								<div class="contacts_item">                                       
-									<div class="contacts_item-info">
-										<div class="contacts_item-title">Адрес:</div>
-										<div class="contacts_item-text">107140, г. Москва, <br>	пер. 1-й Красносельский, д.3, оф. 35</div>
-									</div>
-								</div>
-								<div class="contacts_item">
-									<div class="contacts_item-info">
-										<div class="contacts_item-title">Часы работы:</div>
-										<div class="contacts_item-text">Без выходных c 09:00 до 22:00</div>
-									</div>
-								</div>
-								<div class="contacts_item">
-									<div class="contacts_item-info">
-										<div class="contacts_item-title">Реквизиты:</div>
-										<div class="contacts_item-text">«Глобал Телеком»<br>
-											Руководитель:
-											Шелгунов Андрей Сергеевич<br>
-											ИНН: 7708317167<br> 
-											ОГРН: 1177746465731
-										</div>
-									</div>
-								</div>                                  
+                        <div class="contacts_title title">Контакты</div>                   
+					 </div>	
+					<div class="map_wrap">
+						<div id="map"></div>
+						<div class="cont">
+							<div class="contacts_info">
+								<div class="contacts_info-text">Чтобы получить профессиональную консультацию по выбору и изготовлению витража, обсудить или заказать эскиз, свяжитесь с нами:</div>
+								<a heref="tel:79536961331" class="contacts_info-phone">+7 (953) 696-13-31</a>
+								<a heref="mailto:vitrajmir@mail.ru" class="contacts_info-email">vitrajmir@mail.ru</a>
+								<div class="contacts_info-text">также мы будем рады вас видеть по адресу:</div>
+								<div class="contacts_info-adres">ул. Московская, д. 76</div>
+								<div class="contacts_info-graffik">Режим работы: Пн.-Пт.: 9:00 - 17:00</div>
+								<a href="#" class="contacts_info-link">
+									<span>Связь с художниками</span>
+									<img src="images/telegram.png" alt="">
+								</a>
 							</div>
-							<div class="map_wrap">
-								<div id="map"></div>
-                            </div>
-                        </div>                      
-                    </div>
+							<div class="contacts_img">
+								<img src="images/contacts_img.jpg" alt="">
+							</div>
+					 	</div>								
+					</div>                   
+                   
                 </section>
 
 
 			<footer>
 				<div class="cont">
+					<div class="footer_copyright">© 2022 Витражный мир</div>
+					<a href="#" class="footer_link">
+						<img src="images/vk.png" alt="">
+						<span>Мы вконтакте</span>
+					</a>
+					<div class="footer_author">
+						Разработка сайта: <a href="#">Sokolbrand</a> 
+					</div>
 				</div>
 			</footer>
 
@@ -406,28 +396,44 @@
 
 		<section class="modal_callback" id="modal_callback" style="display: none;">
 			<form>
-				<div class="modal_callback-title title">Получите бесплатную консультацию</div>
-				<div class="consultation_text">На первой бесплатной 15минутной консультации Вы получите определение причины и способа решения Вашей проблемы, практические рекомендации и ответы на другие интересующие Вас вопросы.</div>
+				<div class="modal_callback-title">Сделать заказ</div>
 				<div class="line">
 					<div class="field">
-						<input type="text" placeholder="Ваше имя">
+						<label for="name">Имя</label>
+						<input type="text" id="name">
 					</div>
 				</div>
 				<div class="line">
 					<div class="field">
-						<input type="email" placeholder="Ваша почта">
+						<label for="phone">Телефон</label>
+						<input type="tel" id="phone">
 					</div>
 				</div>
 				<div class="line">
 					<div class="field">
-						<textarea placeholder="Ваш вопрос"></textarea>
+						<label for="email">E-mail</label>
+						<input type="email" id="email">
 					</div>
 				</div>
-				<button class="btn btn-primary btn-blick">	
-					<i class="btn-blick-anim1"></i>
-					<i class="btn-blick-anim2"></i>								
-					<span>Отправить</span>
-					<img src="images/arrow2.svg" alt="">
+				<div class="line">
+					<div class="field">
+						<label for="select">Выберите услугу</label>
+						<select id="select">
+							<option value="1">Витраж дверей шкафов купе</option>
+							<option value="2">Витраж дверей шкафов купе</option>
+							<option value="3">Витраж дверей шкафов купе</option>
+							<option value="4">Витраж дверей шкафов купе</option>
+						</select>
+					</div>
+				</div>
+				<div class="line">
+					<div class="field">
+						<label for="textarea">Дополнительный текст</label>
+						<textarea id="textarea"></textarea>
+					</div>
+				</div>
+				<button>
+					<span>Отправить сообщение</span>
 				</button>
 			</form>
 		</section>
@@ -438,6 +444,8 @@
 		<script src="js/jquery-3.5.0.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/fancybox.min.js"></script>
+		<script src="js/inputmask.min.js"></script>
+		<script src="js/nice-select.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/scripts.js"></script>
 
@@ -447,14 +455,13 @@
 			$(window).on('load', () => {
 				ymaps.ready(() => {
 					let myMap = new ymaps.Map('map', {
-						center: [55.783245, 37.6688840],
+						center: [58.60285956584672,49.64622049999997],
 						zoom: 16,
 						controls: []
 					})
-		
-					
+							
 					// Кастомный маркер
-					let myPlacemark = new ymaps.Placemark([55.783245, 37.668884], {}, {
+					let myPlacemark = new ymaps.Placemark([58.60285956584672,49.64622049999997], {}, {
 						iconLayout : 'default#image',
 						iconImageHref : 'images/marker.svg',
 						iconImageSize : [43, 50],
