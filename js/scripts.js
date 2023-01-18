@@ -205,12 +205,12 @@ $(() => {
        },
        on: {
          init: swiper => {
-           setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
+           setTimeout(() => setHeight($(swiper.$el).find('works .swiper-slide')))
          },
          resize: swiper => {
            setTimeout(() => {
-             $(swiper.$el).find('.swiper-slide').height('auto')
-             setHeight($(swiper.$el).find('.swiper-slide'))
+             $(swiper.$el).find('.works .swiper-slide').height('auto')
+             setHeight($(swiper.$el).find('.works .swiper-slide'))
            })
          }
        }
