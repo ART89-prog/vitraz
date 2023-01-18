@@ -249,6 +249,7 @@
         background: #F6F5F5;
     }
     .technology_wrap {
+        padding: 0;
         padding-top: 20px;
         border: none;        
     }
@@ -260,6 +261,8 @@
     }
     .show-more {
         display: block;
+        color: #7e6281;
+        border-bottom: 1px dotted #7e6281;
     }
     .service {
         padding-top: 40px;
@@ -293,6 +296,15 @@
     .service_item-title {
         margin-top: 18px;
         font-size: 20px;
+    }
+    .about_img:nth-child(1) {
+        margin-bottom: 8px;
+    }
+    .about_img:nth-child(2) {
+        width: calc(50% - 4px);
+    }
+    .about_img:nth-child(3) {
+        width: calc(50% - 4px);
     }
 
     
