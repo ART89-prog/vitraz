@@ -12,10 +12,11 @@
     }
     .swiper-button-prev2 {
         top: calc(100% - 50px);
+        left: calc(50% - 120px);
     }
     .swiper-button-next2 {
         top: calc(100% - 50px);
-        left: calc(100% - 35px);
+        left: calc(50% + 100px);
     }
 
 }

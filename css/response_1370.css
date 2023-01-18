@@ -7,6 +7,13 @@
         left: calc(50% + 600px);
     }
 
+    .swiper-button-prev2 {
+        left: calc(50% - 630px);
+    }
+    .swiper-button-next2 {
+        left: calc(50% + 625px);
+    }
+
 
 }
 

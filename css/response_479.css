@@ -30,6 +30,12 @@
     .swiper-button-next {
         left: calc(91% - 20px);
     }
+    .swiper-button-prev2 {
+        left: 20px;
+    }
+    .swiper-button-next2 {
+        left: calc(100% - 20px);
+    }
     .works .links {
         margin: 64px auto 0;
         width: 224px;

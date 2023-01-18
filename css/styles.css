@@ -851,6 +851,8 @@ header .menu {
     position: absolute;
     top: 50%;
     transform: translateY(-40px);
+    left: calc(50% + 640px);
+    margin: 0;
     transition: all .4s;
 }
 .swiper-button-prev2 {
@@ -860,6 +862,8 @@ header .menu {
     position: absolute;
     top: 50%;
     transform: translateY(-40px);
+    left: calc(50% - 650px);
+    margin: 0;
     transition: all .4s;
 }
 .swiper-button-prev2 .icon {
