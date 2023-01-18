@@ -785,6 +785,12 @@ header .menu {
 .swiper-pagination-bullet + .swiper-pagination-bullet {
     margin-left: 8px !important;
 }
+.service .swiper {
+    overflow: visible !important;
+}
+.works .swiper {
+    overflow: visible !important;
+}
 
 .swiper-slide.visible {
     visibility: visible;
@@ -1012,12 +1018,12 @@ header .menu {
 .contacts_info-link {
     width: 264px;
     height: 48px;
-    padding: 0 15px 0 28px;
+    padding: 0 28px 0 25px;
     background-color: #30a4dc;
     box-shadow: 0px 2px 2px 0px rgba(1,1,1,0.28);
     border-radius: 4px;
     font-size: var(--font_size);
-    line-height: 1.5;
+    line-height: 48px;
     font-weight: 500;
     color: #ffffff;
     display: flex;
@@ -1038,6 +1044,9 @@ header .menu {
     right: 20px;
     top: 380px;
     z-index: 1;
+}
+.contacts_img-mob {
+    display: none;
 }
 
 
@@ -1204,4 +1213,8 @@ footer .cont {
 
 .show-more {
     display: none;
+}
+
+.fancybox__image {
+    border-radius: 8px;
 }

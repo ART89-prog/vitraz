@@ -11,10 +11,11 @@
         transform: translateY(0px);
     }
     .swiper-button-prev2 {
-        top: calc(100% - 105px);
+        top: calc(100% - 50px);
     }
     .swiper-button-next2 {
-        top: calc(100% - 105px);
+        top: calc(100% - 50px);
+        left: calc(100% - 35px);
     }
 
 }

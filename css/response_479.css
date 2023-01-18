@@ -50,10 +50,19 @@
     }
     .contacts .map_wrap {
         height: 320px;
-        margin-bottom: 230px;
+    }
+    .contacts_img-mob img {
+        width: 100%;
     }
     .header_bottom-title {
         font-size: 28px;
+    }
+    .contacts_info-link {
+        width: 224px;
+        height: 40px;
+        padding: 0 24px 0 23px;
+        line-height: 40px;
+        font-size: 14px;
     }
     
 

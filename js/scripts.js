@@ -62,19 +62,6 @@ $(() => {
   $('input[type=tel]').inputmask('+7 (999) 999-99-99')
 
 
-	$('body').on('click', '.modal_link', function (e) {
-	    e.preventDefault()
-
-	    $.fancybox.close(true)
-
-	    $.fancybox.open({
-	        src: $(this).data('content'),
-	        type: 'inline',
-	        touch: false
-	    })
-	})
-
-
 
   	// Скрол к пунктам меню
 	$(".scroll").on("click", function(e){
@@ -91,24 +78,6 @@ $(() => {
 
 
 
-  if ($(window).width() < 500){
-    // Подключаем стиль для мобильных
-    $("head").append($("<link rel='stylesheet' href='css/styleMob.css' type='text/css' media='screen' />"));   
-  }
-  else{
-      // Подключаем стиль для остальных
-      $("head").append($("<link rel='stylesheet' href='css/style.css' type='text/css' media='screen' />"));
-  }
-
-
-
-  // $(".hide-content").hide();
-  // $(".show-more").click(function() {
-  //     $(this).next(".hide-content").slideToggle();
-  //     $(this).text($(this).text() == "Скрыть" ? "Показать еще" : "Скрыть");
-  // });
-
-
 
   $('.show-more').click(function(){
 		$('.hide-content').slideToggle(300); 
@@ -119,7 +88,7 @@ $(() => {
       // Слайдер Услуги
 
       const serviceSliders = [],
-      service = document.querySelectorAll('.service-slider')
+      service = document.querySelectorAll('.service .swiper')
   
       service.forEach(function (el, i) {
       el.classList.add('service_s' + i)
@@ -166,12 +135,12 @@ $(() => {
         },
         on: {
           init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.service .swiper-slide')))
+            setTimeout(() => setHeight($(swiper.$el).find('.swiper')))
           },
           resize: swiper => {
             setTimeout(() => {
-              $(swiper.$el).find('.service .swiper-slide').height('auto')
-              setHeight($(swiper.$el).find('.service .swiper-slide'))
+              $(swiper.$el).find('.swiper').height('auto')
+              setHeight($(swiper.$el).find('.swiper'))
             })
           }
         }
@@ -185,7 +154,7 @@ $(() => {
      // Слайдер Работы
 
      const worksSliders = [],
-     works = document.querySelectorAll('.works-slider')
+     works = document.querySelectorAll('.works .swiper')
  
      works.forEach(function (el, i) {
      el.classList.add('works_s' + i)
@@ -236,12 +205,12 @@ $(() => {
        },
        on: {
          init: swiper => {
-           setTimeout(() => setHeight($(swiper.$el).find('.works .swiper-slide')))
+           setTimeout(() => setHeight($(swiper.$el).find('.works')))
          },
          resize: swiper => {
            setTimeout(() => {
-             $(swiper.$el).find('.works .swiper-slide').height('auto')
-             setHeight($(swiper.$el).find('.works .swiper-slide'))
+             $(swiper.$el).find('.works').height('auto')
+             setHeight($(swiper.$el).find('.works'))
            })
          }
        }
