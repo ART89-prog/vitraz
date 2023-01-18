@@ -2,7 +2,30 @@
 
     :root {
         --font_size: 16px;
-        --font_size_title:50px;
+        --font_size_title: 40px;
+    }
+    .about_left {
+        width: 500px;
+    }
+    .about_img:nth-child(1) {
+        height: 378px;
+        margin-bottom: 16px;
+    }
+    .about_info {
+        width: calc(100% - 530px);
+    }
+    .block {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .technology {
+        margin-bottom: 60px;
+    }
+    .service {
+        padding-top: 80px;
+    }
+    .text p br {
+        display: none;
     }
    
 

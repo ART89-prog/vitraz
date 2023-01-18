@@ -4,6 +4,10 @@
         --font_size: 14px;
         --font_size_title: 28px;
     }
+    .advantages_items > * {
+        display: flex;
+        align-items: center;
+    }
 
 
    
