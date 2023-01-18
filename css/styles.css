@@ -729,7 +729,7 @@ header .menu {
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(62px);
+    transform: translateY(-50%);
     transition: all .4s;
 }
 .swiper-button-prev .icon {
@@ -749,7 +749,7 @@ header .menu {
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(62px);
+    transform: translateY(-50%);
     transition: all .4s;
 }
 .swiper-button-next .icon {
@@ -849,11 +849,14 @@ header .menu {
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(-40px);
-    left: calc(50% + 640px);
+    transform: translateY(-50%);
+    left: calc(50% + 630px);
     margin: 0;
     transition: all .4s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .swiper-button-prev2 {
     width: 50px;
@@ -861,11 +864,14 @@ header .menu {
     border-radius: 90px;
     position: absolute;
     top: 50%;
-    transform: translateY(-40px);
-    left: calc(50% - 650px);
+    transform: translateY(-50%);
+    left: calc(50% - 670px);
     margin: 0;
     transition: all .4s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .swiper-button-prev2 .icon {
     width: 14px;
@@ -906,7 +912,7 @@ header .menu {
     margin-left: 8px !important;
 }
 .swiper-pagination2.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 75px;
+    bottom: -50px;
 }
 
 
