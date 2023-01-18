@@ -91,6 +91,30 @@ $(() => {
 
 
 
+  if ($(window).width() < 500){
+    // Подключаем стиль для мобильных
+    $("head").append($("<link rel='stylesheet' href='css/styleMob.css' type='text/css' media='screen' />"));   
+  }
+  else{
+      // Подключаем стиль для остальных
+      $("head").append($("<link rel='stylesheet' href='css/style.css' type='text/css' media='screen' />"));
+  }
+
+
+
+  // $(".hide-content").hide();
+  // $(".show-more").click(function() {
+  //     $(this).next(".hide-content").slideToggle();
+  //     $(this).text($(this).text() == "Скрыть" ? "Показать еще" : "Скрыть");
+  // });
+
+
+
+  $('.show-more').click(function(){
+		$('.hide-content').slideToggle(300); 
+    $('.show-more').remove();     
+		return false;
+	});
 
       // Слайдер Услуги
 

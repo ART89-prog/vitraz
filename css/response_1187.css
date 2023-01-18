@@ -21,8 +21,12 @@
     .technology {
         margin-bottom: 60px;
     }
+    .contacts {
+        padding-top: 60px;
+    }
     .service {
         padding-top: 80px;
+        padding-bottom: 80px;
     }
     .text p br {
         display: none;

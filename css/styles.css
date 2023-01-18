@@ -681,6 +681,7 @@ header .menu {
 /* service */
 .service {
     background: #2A292F;
+    padding-top: 80px;
     padding-bottom: 136px;
 }
 .service_title {
@@ -967,8 +968,8 @@ header .menu {
     background: #ffffff;
     border-radius: 8px;
     padding: 36px 31px 32px;
-    left: 0;
-    top: 40px;
+    left: 20px;
+    top: 130px;
 }
 .contacts_info-text {
     font-size: var(--font_size);
@@ -1034,8 +1035,8 @@ header .menu {
 }
 .contacts_img {
     position: absolute;
-    right: 0;
-    top: 290px;
+    right: 20px;
+    top: 380px;
     z-index: 1;
 }
 
@@ -1065,6 +1066,10 @@ footer .cont {
     font-size: 14px;
     line-height: 1.2;
     font-weight: 400;
+}
+.footer_link img {
+    width: 32px;
+    height: 32px;
 }
 .footer_link span:hover {
     border-bottom: 1px solid transparent;
@@ -1195,4 +1200,8 @@ footer .cont {
 }
 .fancybox__content>.carousel__button.is-close:hover {
     color: var(--fancybox-color, #92b0ab);
+}
+
+.show-more {
+    display: none;
 }

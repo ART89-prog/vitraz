@@ -9,13 +9,13 @@
     }
     .about_info {
         width: 100%;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .about_left {
         width: 100%;
     }
     .about_wrap {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .about_img:nth-child(1) {
         height: auto;
@@ -26,10 +26,14 @@
         padding-bottom: 40px;
     }
     .technology {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
+        padding-bottom: 40px;
     }
     .service {
-        padding-top: 80px;
+        padding-top: 60px;
+    }
+    .contacts {
+        padding-top: 40px;
     }
     .text p {
         margin-bottom: 15px;
@@ -39,13 +43,34 @@
         border-radius: 50px 0 50px 0;
     }
     .title {
-        margin-bottom: 18px;
+        margin-bottom: 23px;
     }
     .service_title {
         margin-bottom: 110px;
     }
     .advantages_items > * {
         width: calc(100%/2 - 30px);
+    }
+    .about_title {
+        text-align: center;
+        margin-bottom: 23px;
+    }
+    .contacts_info {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 0;
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .contacts_info-graffik {
+        margin-bottom: 20px;
+    }
+    .contacts .map_wrap {
+        height: 340px;
+    }
+    .contacts_img {
+        top: 450px;
     }
    
 

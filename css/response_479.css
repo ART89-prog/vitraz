@@ -2,12 +2,60 @@
 
     :root {
         --font_size: 14px;
-        --font_size_title: 28px;
+        --font_size_title: 32px;
     }
     .advantages_items > * {
         display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 16px;
     }
+    .advantages_item-img {
+        margin: 0;
+        margin-right: 16px;
+    }
+    .advantages_item-title {
+        text-align: start;
+    }
+    .advantages_items {
+        margin-left: 0px;
+        margin-bottom: -16px;
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+    .swiper-button-next {
+        left: calc(91% - 20px);
+    }
+    .works .links {
+        margin: 64px auto 0;
+        width: 224px;
+    }
+    .swiper-button-prev .icon,
+    .swiper-button-prev2 .icon,
+    .swiper-button-next .icon,
+    .swiper-button-next2 .icon {
+        width: 10px;
+        height: 18px;
+    }
+    .modal_callback-title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    footer .cont {
+        align-items: flex-start;    
+    }
+    .contacts .map_wrap {
+        height: 320px;
+        margin-bottom: 230px;
+    }
+    .header_bottom-title {
+        font-size: 28px;
+    }
+    
 
 
    

@@ -203,6 +203,7 @@
         width: 64px;
         height: 64px;
         margin: 0px auto 15px;
+        flex-shrink: 0;
     }
     .advantages_item:nth-child(1) img {
         width: 35px;
@@ -243,8 +244,57 @@
     }
     .advantages_item-title br {
         display: none;
-
     }
+    .technology {
+        background: #F6F5F5;
+    }
+    .technology_wrap {
+        padding-top: 20px;
+        border: none;        
+    }
+    .technology_text {
+        text-align: start;
+    }
+    .hide-content {
+        display: none;
+    }
+    .show-more {
+        display: block;
+    }
+    .service {
+        padding-top: 40px;
+    }
+    .contacts_info-phone {
+        font-size: 20px;
+    }
+    .contacts_info-adres,
+    .contacts_info-graffik,
+    .contacts_info-email {
+        font-size: 16px;
+    }
+    .contacts_img {
+        top: calc(100% + 340px);
+        left: 0;
+        right: 0;
+    }
+    .contacts .map_wrap {
+        height: 340px;
+        margin-bottom: 215px;
+    }
+    footer .cont {
+        flex-direction: column;
+    }
+    .footer_copyright {
+        margin-bottom: 13px;
+    }
+    .footer_link {
+        margin-bottom: 13px;
+    }
+    .service_item-title {
+        margin-top: 18px;
+        font-size: 20px;
+    }
+
     
 
 
