@@ -11,7 +11,7 @@
     header .menu {
         position: fixed;
         z-index: 107;
-        top: 48px;
+        top: 49px;
         left: 0;
 
         display: flex;
@@ -183,7 +183,7 @@
     .header_top {
         position: fixed;
         z-index: 890;
-        background: #333;
+        background: #2A292F;
         width: 100%;
         margin: -124px -20px -10px;
         padding: 10px 20px 10px;

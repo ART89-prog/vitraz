@@ -723,9 +723,6 @@ header .menu {
     margin-top: 11px;
     text-align: center;
 }
-.swiper-slide {
-    position: relative;
-}
 .swiper-button-prev {
     width: 50px;
     height: 50px;
@@ -792,12 +789,14 @@ header .menu {
     overflow: visible !important;
 }
 
-.swiper-slide.visible {
+.service .swiper-slide.visible,
+.works .swiper-slide.visible {
     visibility: visible;
     pointer-events: auto;
     opacity: 1;
 }
-.swiper-slide {
+.service .swiper-slide,
+.works .swiper-slide {
     position: relative;
     visibility: hidden;
     width: auto;
@@ -854,6 +853,7 @@ header .menu {
     left: calc(50% + 640px);
     margin: 0;
     transition: all .4s;
+    cursor: pointer;
 }
 .swiper-button-prev2 {
     width: 50px;
@@ -865,6 +865,7 @@ header .menu {
     left: calc(50% - 650px);
     margin: 0;
     transition: all .4s;
+    cursor: pointer;
 }
 .swiper-button-prev2 .icon {
     width: 14px;

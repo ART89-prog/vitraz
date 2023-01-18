@@ -94,7 +94,7 @@ $(() => {
       el.classList.add('service_s' + i)
   
       let options = {
-        loop: false,
+        loop: true,
         speed: 500,
         watchSlidesProgress: true,
         slideActiveClass: 'active',
@@ -135,12 +135,12 @@ $(() => {
         },
         on: {
           init: swiper => {
-            setTimeout(() => setHeight($(swiper.$el).find('.swiper')))
+            setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
           },
           resize: swiper => {
             setTimeout(() => {
-              $(swiper.$el).find('.swiper').height('auto')
-              setHeight($(swiper.$el).find('.swiper'))
+              $(swiper.$el).find('.swiper-slide').height('auto')
+              setHeight($(swiper.$el).find('.swiper-slide'))
             })
           }
         }
@@ -160,7 +160,7 @@ $(() => {
      el.classList.add('works_s' + i)
  
      let options = {
-       loop: false,
+       loop: true,
        speed: 500,
        watchSlidesProgress: true,
        slideActiveClass: 'active',
@@ -205,12 +205,12 @@ $(() => {
        },
        on: {
          init: swiper => {
-           setTimeout(() => setHeight($(swiper.$el).find('.works')))
+           setTimeout(() => setHeight($(swiper.$el).find('.swiper-slide')))
          },
          resize: swiper => {
            setTimeout(() => {
-             $(swiper.$el).find('.works').height('auto')
-             setHeight($(swiper.$el).find('.works'))
+             $(swiper.$el).find('.swiper-slide').height('auto')
+             setHeight($(swiper.$el).find('.swiper-slide'))
            })
          }
        }
